@@ -10,17 +10,168 @@
 
 
 
+# get user inputs
+
+echo -e "\nEnter new password:\n"
+read -r userPassword
+echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n."
+
+
+echo -e "\nEnter desired timezone in format of Country/City (Timezones can be listed by switching to a different console using Alt+F2, logging in as root, and issuing command \"timedatectl list-timezones\") (Switch back to this console with Alt+F1):\n"
+read -r timeZone
+echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n."
+
+
+
+
+
+
+
+
+
+# import files
+echo -e "\nImporting files\n"
+sleep 2
+git clone https://github.com/soberhippie3/archinstall
+echo -e "\nDone\n"
+sleep 2
+
+
+
+
+
+
+
+
+
+
+# configure system
+
+# set password
+echo -e "\nSetting password\n"
+sleep 2
+echo -e "raspberry\n$userPassword\n$userPassword" | passwd 
+echo -e "\nDone\n"
+sleep 2
+
+
+# set the time and language       ===============================
+echo -e "\nSetting time and language\n"
+sleep 2
+ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
+hwclock --systohc
+sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo -e "\nDone\n"
+sleep 2
+
+
+# configure bash
+echo -e "\nConfiguring bash\n"
+sleep 2
+echo -e "export PS1='\[$(tput bold)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;6m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;208m\]\W\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]\[\033[38;5;201m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]'" >> /home/pi/.bashrc
+echo -e "\n# Enables auto-correct" >> /home/pi/.bashrc
+echo -e "shopt -s cdspell" >> /home/pi/.bashrc
+echo -e "\n# Enables color" >> /home/pi/.bashrc
+echo -e "alias diff='diff --color=auto'" >> /home/pi/.bashrc
+echo -e "alias grep='grep --color=auto'" >> /home/pi/.bashrc
+echo -e "alias ip='ip -color=auto'" >> /home/pi/.bashrc
+echo -e "export LESS='-R --use-color -Dd+r\$Du+b'" >> /home/pi/.bashrc
+echo -e "alias ls='ls --color=auto'" >> /home/pi/.bashrc
+echo -e "export MANPAGER=\"less -R --use-color -Dd+r -Du+b\"" >> /home/pi/.bashrc
+echo -e "alias sudo='sudo '" >> /home/pi/.bashrc
+echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
+echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
+echo -e "\nDone\n"
+sleep 2
+
+
+
+
+
+
+
+
+
+
 # install packages
 echo -e "\nInstalling necessary packages\n"
 sleep 2
-apt install kde-plasma-desktop guake flatpak vlc
+apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent
 echo -e "\nDone\n"
 sleep 2
+
+
+
+
+
+
+
+
 
 
 # configure packages
-echo -e "\nConfiguring packages\n"
+
+echo -e "\nConfiguring flatpak\n"
 sleep 2
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+cp /home/pi/archinstall/personal/flatpak-update.service /etc/systemd/user
+cp /home/pi/archinstall/personal/flatpak-update.timer /etc/systemd/user
+systemctl --user daemon-reload
+systemctl --user enable --now flatpak-update.timer
 echo -e "\nDone\n"
 sleep 2
+
+
+# configure qBittorrent
+echo -e "\nConfiguring qBittorrent\n"
+sleep 2
+cp /home/pi/archinstall/personal/qBittorrent.conf /home/pi/.config/qBittorrent
+echo -e "\nDone\n"
+sleep 2
+
+
+# configure dolphin
+echo -e "\nCongfiguring Dolphin\n"
+sleep 2
+cp /home/pi/archinstall/personal/dolphinui.rc /home/pi/.local/share/kxmlgui5/dolphin
+echo -e "[General]\nRememberOpenedTabs=false" >> /home/pi/.config/dolphinrc
+echo -e "[Settings]\nHiddenFilesShown=true" >> /home/pi/.local/share/dolphin/view_properties/global/.directory
+echo -e "[/home/pi/.local/share/Trash]\nDays=14\nLimitReachedAction=0\nPercent=10\nUseSizeLimit=true\nUseTimeLimit=true" >> /home/pi/.config/ktrashrc
+echo -e "\nDone\n"
+sleep 2
+
+
+# configure kde plasma
+echo -e "\nConfiguring Plasma\n"
+sleep 2
+cp /home/"$userName"/archinstall/personal/guake /home/"$userName"/Desktop
+cp /home/"$userName"/archinstall/personal/system_monitor.page /home/"$userName"/Desktop
+cp /home/"$userName"/archinstall/personal/wallpaper.jpg /home/"$userName"/Pictures
+cp /home/"$userName"/archinstall/personal/mimeapps.list /home/"$userName"/.config
+cp /home/"$userName"/archinstall/personal/plasma-org.kde.plasma.desktop-appletsrc /home/"$userName"/.config
+su -c "plasma-apply-lookandfeel --apply org.kde.breezedark.desktop" "$userName"
+sed -i 's/Adwaita/Breeze/' /usr/share/gtk-3.0/settings.ini
+echo -e "gtk-application-prefer-dark-theme = true" >> /usr/share/gtk-3.0/settings.ini
+echo -e "index hidden folders=true" >> /home/"$userName"/.config/baloofilerc
+echo -e "only basic indexing=true" >> /home/"$userName"/.config/baloofilerc
+echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/"$userName"/.config/plasmanotifyrc
+sed -i 's/\[General\]/\[General\]\nTerminalApplication=guake\nTerminalService=guake.desktop\nBrowserApplication=com.github.Eloston.UngoogledChromium.desktop/' /home/"$userName"/.config/kdeglobals
+echo -e "\nDone\n"
+sleep 2
+
+
+
+
+
+
+
+
+
+
+
+# reboot
+echo -e "\nRebooting in 5 seconds\n"
+sleep 5
+reboot
