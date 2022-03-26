@@ -146,21 +146,20 @@ sleep 2
 # configure kde plasma
 echo -e "\nConfiguring Plasma\n"
 sleep 2
-cp /home/"$userName"/archinstall/personal/guake /home/"$userName"/Desktop
-cp /home/"$userName"/archinstall/personal/system_monitor.page /home/"$userName"/Desktop
-cp /home/"$userName"/archinstall/personal/wallpaper.jpg /home/"$userName"/Pictures
-cp /home/"$userName"/archinstall/personal/mimeapps.list /home/"$userName"/.config
-cp /home/"$userName"/archinstall/personal/plasma-org.kde.plasma.desktop-appletsrc /home/"$userName"/.config
-su -c "plasma-apply-lookandfeel --apply org.kde.breezedark.desktop" "$userName"
+cp /home/pi/archinstall/personal/guake /home/pi/Desktop
+cp /home/pi/archinstall/personal/system_monitor.page /home/pi/Desktop
+cp /home/pi/archinstall/personal/wallpaper.jpg /home/pi/Pictures
+cp /home/pi/archinstall/personal/mimeapps.list /home/pi/.config
+cp /home/pi/archinstall/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
+plasma-apply-lookandfeel --apply org.kde.breezedark.desktop
 sed -i 's/Adwaita/Breeze/' /usr/share/gtk-3.0/settings.ini
 echo -e "gtk-application-prefer-dark-theme = true" >> /usr/share/gtk-3.0/settings.ini
-echo -e "index hidden folders=true" >> /home/"$userName"/.config/baloofilerc
-echo -e "only basic indexing=true" >> /home/"$userName"/.config/baloofilerc
-echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/"$userName"/.config/plasmanotifyrc
-sed -i 's/\[General\]/\[General\]\nTerminalApplication=guake\nTerminalService=guake.desktop\nBrowserApplication=com.github.Eloston.UngoogledChromium.desktop/' /home/"$userName"/.config/kdeglobals
+echo -e "index hidden folders=true" >> /home/pi/.config/baloofilerc
+echo -e "only basic indexing=true" >> /home/pi/.config/baloofilerc
+echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/pi/.config/plasmanotifyrc
+sed -i 's/\[General\]/\[General\]\nTerminalApplication=guake\nTerminalService=guake.desktop\nBrowserApplication=com.github.Eloston.UngoogledChromium.desktop/' /home/pi/.config/kdeglobals
 echo -e "\nDone\n"
 sleep 2
-
 
 
 
