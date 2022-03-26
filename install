@@ -103,6 +103,15 @@ echo -e "\nDone\n"
 sleep 2
 
 
+# install flatpaks
+echo -e "\nInstalling flatpaks\n"
+sleep 2
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install --user com.github.Eloston.UngoogledChromium
+echo -e "\nDone\n"
+sleep 2
+
+
 
 
 
@@ -115,7 +124,6 @@ sleep 2
 
 echo -e "\nConfiguring flatpak\n"
 sleep 2
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 cp /home/pi/archinstall/personal/flatpak-update.service /etc/systemd/user
 cp /home/pi/archinstall/personal/flatpak-update.timer /etc/systemd/user
 systemctl --user daemon-reload
