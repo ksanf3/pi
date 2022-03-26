@@ -1,0 +1,16 @@
+#!/bin/bash
+# this script will configure the system and install KDE Plasma
+
+
+
+
+
+
+
+
+
+
+# install packages
+echo -e "\nInstalling necessary packages\n"
+sleep 2
+apt install kde-plasma-desktop guake 
