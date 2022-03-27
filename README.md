@@ -13,3 +13,9 @@
 - chmod a+x /home/pi/pi/install
 - sudo apt update (to refresh sudo timeout)
 - /home/pi/pi/install
+- after the system reboots, open qBittorrent and accept notice
+
+## Run config script
+- chmod a+x /home/pi/pi/config
+- sudo apt update (to refresh sudo timeout)
+- /home/pi/pi/config
