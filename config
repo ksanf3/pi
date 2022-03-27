@@ -80,9 +80,6 @@ cp /home/pi/personal/system_monitor.page /home/pi/Desktop
 cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
 cp /home/pi/personal/mimeapps.list /home/pi/.config
 cp /home/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
-plasma-apply-lookandfeel --apply org.kde.breezedark.desktop
-sudo sed -i 's/Adwaita/Breeze/' /usr/share/gtk-3.0/settings.ini
-sudo echo -e "gtk-application-prefer-dark-theme = true" >> /usr/share/gtk-3.0/settings.ini
 sudo echo -e "index hidden folders=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "only basic indexing=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/pi/.config/plasmanotifyrc
