@@ -36,7 +36,6 @@ sleep 2
 # configure flatpak and install packages
 echo -e "\nConfiguring flatpak\n"
 sleep 2
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo cp /home/pi/personal/flatpak-update.service /etc/systemd/user
 sudo cp /home/pi/personal/flatpak-update.timer /etc/systemd/user
 systemctl --user daemon-reload
