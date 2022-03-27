@@ -52,7 +52,7 @@ echo -e "\nConfiguring Guake\n"
 sleep 2
 sudo cp /usr/share/applications/guake.desktop /home/pi/.config/autostart
 echo -e "\nDone\n"
-sleep 2
+sleep 20
 
 
 # configure kde plasma
