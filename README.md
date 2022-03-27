@@ -14,7 +14,11 @@ Install git and clone the repo with "git clone https://github.com/soberhippie3/p
 
 
 Run the script with...
+  
   cd pi
+  
   chmod a+x ./install
+  
   sudo apt update   # to refresh sudo timeout
+  
   ./install
