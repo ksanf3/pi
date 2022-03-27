@@ -98,7 +98,13 @@ sleep 20
 
 
 
-# reboot
+# remove personal files and reboot
+echo -e "\nRemoving personal files\n"
+sleep 2
+sudo rm -r /home/pi/personal
+echo -e "\nDone\n"
+sleep 2
+
 echo -e "\nRebooting in 5 seconds\n"
 sleep 5
 reboot
