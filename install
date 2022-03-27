@@ -88,14 +88,6 @@ echo -e "\nDone\n"
 sleep 2
 
 
-# install flatpaks
-echo -e "\nInstalling flatpaks\n"
-sleep 2
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-echo -e "\nDone\n"
-sleep 2
-
-
 
 
 
