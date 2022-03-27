@@ -44,10 +44,8 @@ sleep 2
 echo -e "\nSetting time and language\n"
 sleep 2
 sudo ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
-#sudo hwclock --systohc
 sudo sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
 sudo locale-gen
-sudo echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo -e "\nDone\n"
 sleep 2
 
@@ -94,7 +92,6 @@ sleep 2
 echo -e "\nInstalling flatpaks\n"
 sleep 2
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-#flatpak install --user com.github.Eloston.UngoogledChromium
 echo -e "\nDone\n"
 sleep 2
 
