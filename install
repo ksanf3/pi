@@ -29,21 +29,6 @@ echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n
 
 
 
-# import files
-echo -e "\nImporting files\n"
-sleep 2
-git clone https://github.com/soberhippie3/archinstall
-echo -e "\nDone\n"
-sleep 2
-
-
-
-
-
-
-
-
-
 
 # configure system
 
