@@ -68,6 +68,8 @@ sudo echo -e "export MANPAGER=\"less -R --use-color -Dd+r -Du+b\"" >> /home/pi/.
 sudo echo -e "alias sudo='sudo '" >> /home/pi/.bashrc
 sudo echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
 sudo echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
+sudo echo -e "\n# apt alias" >> /home/pi/.bashrc
+sudo echo -e "alias apt-update='sudo apt update && sudo apt full-upgrade'" >> /home/pi/.bashrc
 echo -e "\nDone\n"
 sleep 2
 
