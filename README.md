@@ -5,7 +5,7 @@
 - Password: raspberry
 
 ## Setup Instructions
-- After logging in, run "sudo raspi-config" to set up WiFi through "System Options". Under "Localisation Options", set Locale to "en_US.UTF-8", set 
+- After logging in, run "sudo raspi-config" to set up WiFi through "System Options"
 - sudo apt update && sudo apt full-upgrade
 - sudo apt install git
 - git clone https://github.com/soberhippie3/pi
