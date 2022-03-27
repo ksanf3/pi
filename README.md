@@ -5,7 +5,7 @@
 - Password: raspberry
 
 ## Setup Instructions
-- After logging in, run "sudo raspi-config" to set up WiFi and Region
+- After logging in, run "sudo raspi-config" to set up WiFi through "System Options" and Region through "
 - Update the system with "sudo apt update && sudo apt full-upgrade"
 - Install git and clone the repo with "git clone https://github.com/soberhippie3/pi"
 
