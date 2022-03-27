@@ -19,3 +19,6 @@
 - chmod a+x /home/pi/pi/config
 - sudo apt update (to refresh sudo timeout)
 - /home/pi/pi/config
+
+## Configuration
+- In display settings, disable compositor on startup
