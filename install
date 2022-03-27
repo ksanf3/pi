@@ -40,7 +40,7 @@ echo -e "\nDone\n"
 sleep 2
 
 
-# set the time and language       ===============================
+# set the time and language
 echo -e "\nSetting time and language\n"
 sleep 2
 sudo ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
@@ -81,7 +81,7 @@ sleep 2
 
 
 # install packages
-echo -e "\nInstalling necessary packages\n"
+echo -e "\nInstalling packages\n"
 sleep 2
 sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor
 echo -e "\nDone\n"
