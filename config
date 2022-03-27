@@ -3,8 +3,9 @@
 # configure flatpak and install packages
 echo -e "\nConfiguring flatpak\n"
 sleep 2
-sudo cp /home/pi/personal/flatpak-update.service /etc/systemd/user
-sudo cp /home/pi/personal/flatpak-update.timer /etc/systemd/user
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo cp /home/pi/pi/personal/flatpak-update.service /etc/systemd/user
+sudo cp /home/pi/pi/personal/flatpak-update.timer /etc/systemd/user
 sudo systemctl --user daemon-reload
 sudo systemctl --user enable --now flatpak-update.timer
 flatpak install --user com.github.Eloston.UngoogledChromium
@@ -15,7 +16,7 @@ sleep 20
 # configure qBittorrent
 echo -e "\nConfiguring qBittorrent\n"
 sleep 2
-sudo cp /home/pi/personal/qBittorrent.conf /home/pi/.config/qBittorrent
+sudo cp /home/pi/pi/personal/qBittorrent.conf /home/pi/.config/qBittorrent
 echo -e "\nDone\n"
 sleep 20
 
@@ -23,7 +24,7 @@ sleep 20
 # configure dolphin
 echo -e "\nCongfiguring Dolphin\n"
 sleep 2
-sudo cp /home/pi/personal/dolphinui.rc /home/pi/.local/share/kxmlgui5/dolphin
+sudo cp /home/pi/pi/personal/dolphinui.rc /home/pi/.local/share/kxmlgui5/dolphin
 sudo echo -e "[General]\nRememberOpenedTabs=false" >> /home/pi/.config/dolphinrc
 sudo echo -e "[Settings]\nHiddenFilesShown=true" >> /home/pi/.local/share/dolphin/view_properties/global/.directory
 sudo echo -e "[/home/pi/.local/share/Trash]\nDays=14\nLimitReachedAction=0\nPercent=10\nUseSizeLimit=true\nUseTimeLimit=true" >> /home/pi/.config/ktrashrc
@@ -34,11 +35,11 @@ sleep 20
 # configure kde plasma
 echo -e "\nConfiguring Plasma\n"
 sleep 2
-cp /home/pi/personal/guake /home/pi/Desktop
-cp /home/pi/personal/system_monitor.page /home/pi/Desktop
-cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
-cp /home/pi/personal/mimeapps.list /home/pi/.config
-cp /home/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
+cp /home/pi/pi/personal/guake /home/pi/Desktop
+cp /home/pi/pi/personal/system_monitor.page /home/pi/Desktop
+cp /home/pi/pi/personal/wallpaper.jpg /home/pi/Pictures
+cp /home/pi/pi/personal/mimeapps.list /home/pi/.config
+cp /home/pi/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
 plasma-apply-lookandfeel --apply org.kde.breezedark.desktop
 sudo sed -i 's/Adwaita/Breeze/' /usr/share/gtk-3.0/settings.ini
 sudo echo -e "gtk-application-prefer-dark-theme = true" >> /usr/share/gtk-3.0/settings.ini
