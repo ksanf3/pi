@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # show instructions
 echo -e "\nDont press any keys until you open qBittorrent and accept the notice. Once done, press ENTER\n"
 read -r placeHolder
