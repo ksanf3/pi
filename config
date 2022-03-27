@@ -1,5 +1,22 @@
+# import files
+echo -e "\nImporting files\n"
+sleep 2
+git clone https://github.com/soberhippie3/archinstall
+echo -e "\nDone\n"
+sleep 2
+
+
+
+
+
+
+
+
+
+
 # configure packages
 
+# configure flatpak
 echo -e "\nConfiguring flatpak\n"
 sleep 2
 sudo cp /home/pi/archinstall/personal/flatpak-update.service /etc/systemd/user
