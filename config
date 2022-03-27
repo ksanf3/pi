@@ -1,7 +1,7 @@
 # show instructions
 echo -e "\nDont press any keys until you open qBittorrent and accept the notice. Once done, press ENTER\n"
 read -r placeHolder
-echo -e "\nDon't press any keys until you follow these instructions:\n\n\nRight click on the desktop and select \"Enter Edit Mode\"\nAdd Widgets\nGet New Widgets\nDownload New Plasma Widgets\ninstall "\Weather Widget\"\n\n\nOnce done, press ENTER\n"
+echo -e "\nDon't press any keys until you follow these instructions:\n\n\nRight click on the desktop and select \"Enter Edit Mode\"\nAdd Widgets\nGet New Widgets\nDownload New Plasma Widgets\ninstall \"Weather Widget\"\n\n\nOnce done, press ENTER\n"
 read -r placeHolder
 
 
