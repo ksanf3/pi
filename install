@@ -85,7 +85,7 @@ sleep 2
 # install packages
 echo -e "\nInstalling packages\n"
 sleep 2
-sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor
+sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor dconf-cli
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\nDone\n"
 sleep 2
