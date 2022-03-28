@@ -105,7 +105,7 @@ sudo echo -e "index hidden folders=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "only basic indexing=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/pi/.config/plasmanotifyrc
 sudo sed -i 's/\[General\]/\[General\]\nTerminalApplication=guake\nTerminalService=guake.desktop\nBrowserApplication=com.github.Eloston.UngoogledChromium.desktop/' /home/pi/.config/kdeglobals
-sudo sed -i 's/LANG=en_GB.UTF-8/LANG=en_US.UTF-8/' /home/pi/config/plasma-localerc
+sudo sed -i 's/LANG=en_GB.UTF-8/LANG=en_US.UTF-8/' /home/pi/.config/plasma-localerc
 echo -e "\nDone\n"
 sleep 2
 
