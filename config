@@ -87,6 +87,7 @@ sleep 2
 # configure guake
 echo -e "\nConfiguring Guake\n"
 sleep 2
+dconf load /apps/guake/ < /home/pi/personal/guake
 sudo mkdir /home/pi/.config/autostart
 sudo cp /usr/share/applications/guake.desktop /home/pi/.config/autostart
 echo -e "\nDone\n"
@@ -96,7 +97,6 @@ sleep 2
 # configure kde plasma
 echo -e "\nConfiguring Plasma\n"
 sleep 2
-cp /home/pi/personal/guake /home/pi/Desktop
 cp /home/pi/personal/system_monitor.page /home/pi/Desktop
 mkdir Pictures
 cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
