@@ -70,6 +70,7 @@ sleep 20
 # configure guake
 echo -e "\nConfiguring Guake\n"
 sleep 2
+sudo mkdir /home/pi/.config/autostart
 sudo cp /usr/share/applications/guake.desktop /home/pi/.config/autostart
 echo -e "\nDone\n"
 sleep 2
