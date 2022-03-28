@@ -98,6 +98,7 @@ echo -e "\nConfiguring Plasma\n"
 sleep 2
 cp /home/pi/personal/guake /home/pi/Desktop
 cp /home/pi/personal/system_monitor.page /home/pi/Desktop
+mkdir Pictures
 cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
 cp /home/pi/personal/mimeapps.list /home/pi/.config
 cp /home/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
