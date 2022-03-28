@@ -35,33 +35,6 @@ sleep 2
 
 # configure packages
 
-# configure bash
-echo -e "\nConfiguring bash\n"
-sleep 2
-sudo echo -e "export PS1='\[$(tput bold)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;6m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;208m\]\W\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]\[\033[38;5;201m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]'" >> /home/pi/.bashrc
-sudo echo -e "\n# Enables auto-correct" >> /home/pi/.bashrc
-sudo echo -e "shopt -s cdspell" >> /home/pi/.bashrc
-sudo echo -e "\n# Enables color" >> /home/pi/.bashrc
-sudo echo -e "alias diff='diff --color=auto'" >> /home/pi/.bashrc
-sudo echo -e "alias grep='grep --color=auto'" >> /home/pi/.bashrc
-sudo echo -e "alias ip='ip -color=auto'" >> /home/pi/.bashrc
-sudo echo -e "alias ls='ls --color=auto'" >> /home/pi/.bashrc
-sudo echo -e "alias sudo='sudo '" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_mb=$'\e[1;32m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_md=$'\e[1;32m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_me=$'\e[0m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_se=$'\e[0m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_so=$'\e[01;33m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_ue=$'\e[0m'" >> /home/pi/.bashrc
-sudo echo -e "export LESS_TERMCAP_us=$'\e[1;4;31m'" >> /home/pi/.bashrc
-sudo echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
-sudo echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
-sudo echo -e "\n# apt alias" >> /home/pi/.bashrc
-sudo echo -e "alias apt-update='sudo apt update && sudo apt full-upgrade'" >> /home/pi/.bashrc
-echo -e "\nDone\n"
-sleep 2
-
-
 # configure flatpak and install packages
 echo -e "\nConfiguring flatpak\n"
 sleep 2
