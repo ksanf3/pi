@@ -40,6 +40,7 @@ sudo cp /home/pi/personal/flatpak-update.service /etc/systemd/user
 sudo cp /home/pi/personal/flatpak-update.timer /etc/systemd/user
 systemctl --user daemon-reload
 systemctl --user enable --now flatpak-update.timer
+flatpak update
 flatpak install com.github.Eloston.UngoogledChromium
 echo -e "\nDone\n"
 sleep 20
