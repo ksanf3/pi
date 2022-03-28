@@ -52,7 +52,7 @@ systemctl --user enable --now flatpak-update.timer
 flatpak update
 flatpak install com.github.Eloston.UngoogledChromium
 echo -e "\nDone\n"
-sleep 20
+sleep 2
 
 
 # configure qBittorrent
@@ -71,7 +71,7 @@ sudo echo -e "[General]\nRememberOpenedTabs=false" >> /home/pi/.config/dolphinrc
 sudo echo -e "[Settings]\nHiddenFilesShown=true" >> /home/pi/.local/share/dolphin/view_properties/global/.directory
 sudo echo -e "[/home/pi/.local/share/Trash]\nDays=14\nLimitReachedAction=0\nPercent=10\nUseSizeLimit=true\nUseTimeLimit=true" >> /home/pi/.config/ktrashrc
 echo -e "\nDone\n"
-sleep 20
+sleep 2
 
 
 # configure guake
