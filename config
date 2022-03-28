@@ -11,6 +11,10 @@ echo -e "\nFollow these instructions:\n\n\n1. Right click on the desktop and sel
 read -r placeHolder
 echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n."
 
+echo -e "\nDownload NordVPN from their website, launch the package, install NordVPN with apt, then login. Once done, type \"done\" and press ENTER\n"
+read -r placeholder
+echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n."
+
 echo -e "\nDone\n"
 sleep 2
 echo -e "\nConfiguring System\n"
@@ -65,6 +69,20 @@ sleep 2
 echo -e "\nConfiguring qBittorrent\n"
 sleep 2
 sudo cp /home/pi/personal/qBittorrent.conf /home/pi/.config/qBittorrent
+echo -e "\nDone\n"
+sleep 2
+
+
+# configure nordvpn
+echo -e "\nCongfiguring NordVPN\n"
+sleep 2
+pacman -S --noconfirm wireguard-tools
+nordvpn set technology NordLynx
+nordvpn set firewall enabled
+nordvpn set notify enabled
+nordvpn set autoconnect enabled "$nordCountry"
+nordvpn connect "$nordCountry"
+nordvpn set killswitch enabled
 echo -e "\nDone\n"
 sleep 2
 
