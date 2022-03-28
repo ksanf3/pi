@@ -1,4 +1,4 @@
-# pi
+# Install Raspberry Pi OS Lite with Raspberry Pi Imager
 
 ## Default Login
 - Username: pi
