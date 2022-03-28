@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # show instructions
-echo -e "\nDon't press any keys until you open qBittorrent and accept the notice. Once done, type \"done\" and press ENTER\n"
+echo -e "\nOpen qBittorrent and accept the notice. Once done, type \"done\" and press ENTER\n"
 read -r placeHolder
-echo -e "\nDon't press any keys until you open Dolphin and then exit out. Once done, type \"done\" and press ENTER\n"
+echo -e "\nOpen Dolphin and then exit out. Once done, type \"done\" and press ENTER\n"
 read -r placeholder
-echo -e "\nDon't press any keys until you follow these instructions:\n\n\nRight click on the desktop and select \"Enter Edit Mode\"\nAdd Widgets\nGet New Widgets\nDownload New Plasma Widgets\ninstall \"Weather Widget\"\n\n\nOnce done, type \"done\" and press ENTER\n"
+echo -e "\nFollow these instructions:\n\n\n1. Right click on the desktop and select \"Enter Edit Mode\"\n2. Add Widgets\n3. Get New Widgets\n4. Download New Plasma Widgets\n5. Install \"Weather Widget\"\n\n\nOnce done, type \"done\" and press ENTER\n"
 read -r placeHolder
 
 
