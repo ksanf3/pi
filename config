@@ -47,6 +47,13 @@ sudo echo -e "alias grep='grep --color=auto'" >> /home/pi/.bashrc
 sudo echo -e "alias ip='ip -color=auto'" >> /home/pi/.bashrc
 sudo echo -e "alias ls='ls --color=auto'" >> /home/pi/.bashrc
 sudo echo -e "alias sudo='sudo '" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_mb=$'\e[1;32m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_md=$'\e[1;32m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_me=$'\e[0m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_se=$'\e[0m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_so=$'\e[01;33m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_ue=$'\e[0m'" >> /home/pi/.bashrc
+sudo echo -e "export LESS_TERMCAP_us=$'\e[1;4;31m'" >> /home/pi/.bashrc
 sudo echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
 sudo echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
 sudo echo -e "\n# apt alias" >> /home/pi/.bashrc
