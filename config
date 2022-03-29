@@ -30,22 +30,6 @@ sleep 2
 
 
 
-# import personal files
-echo -e "\nImporting personal files\n"
-sleep 2
-git clone https://github.com/soberhippie3/personal
-echo -e "\nDone\n"
-sleep 2
-
-
-
-
-
-
-
-
-
-
 # configure packages
 
 # configure flatpak and install flatpaks
