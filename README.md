@@ -15,7 +15,7 @@
 - sudo apt update (to refresh sudo timeout)
 - /home/pi/pi/install
 
-## Read the files on the desktop
+## Read the file on the desktop
 
 ## Run config script
 - chmod a+x /home/pi/pi/config
