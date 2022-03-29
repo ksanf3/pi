@@ -99,6 +99,23 @@ sleep 2
 
 
 
+# import personal files
+echo -e "\nImporting personal files\n"
+sleep 2
+git clone https://github.com/soberhippie3/personal
+cp /home/pi/personal/nordvpn /home/pi/Desktop
+echo -e "\nDone\n"
+sleep 2
+
+
+
+
+
+
+
+
+
+
 # reboot
 echo -e "\nRebooting in 5 seconds\n"
 sleep 5
