@@ -70,6 +70,9 @@ sudo echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
 sudo echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
 sudo echo -e "\n# apt alias" >> /home/pi/.bashrc
 sudo echo -e "alias apt-update='sudo apt update && sudo apt full-upgrade'" >> /home/pi/.bashrc
+echo -e "\n# NordVPN aliases" >> /home/pi/.bashrc
+echo -e "alias nordvpn-disconnect='sudo nordvpn disconnect && sudo nordvpn set killswitch disabled'" >> /home/pi/.bashrc
+echo -e "alias nordvpn-connect='sudo nordvpn connect United_States && sudo nordvpn set killswitch enabled'" >> /home/pi/.bashrc
 echo -e "\nDone\n"
 sleep 2
 
