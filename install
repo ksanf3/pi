@@ -76,6 +76,7 @@ sleep 2
 echo -e "\nImporting personal files\n"
 sleep 2
 git clone https://github.com/soberhippie3/personal
+mkdir /home/pi/Desktop
 cp /home/pi/personal/pi_config /home/pi/Desktop
 echo -e "\nDone\n"
 sleep 2
