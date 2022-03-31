@@ -13,8 +13,6 @@ echo -e "\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n
 
 echo -e "\nDone\n"
 sleep 2
-echo -e "\nInstalling KDE Plasma\n"
-sleep 2
 
 
 
