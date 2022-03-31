@@ -57,6 +57,8 @@ sleep 2
 echo -e "\nInstalling packages\n"
 sleep 2
 sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor dconf-cli
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+usermod -aG nordvpn pi
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\nDone\n"
 sleep 2
