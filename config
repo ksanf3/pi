@@ -74,6 +74,7 @@ sleep 2
 
 echo -e "\nInstalling flatpaks\n"
 sleep 2
+sudo apt purge chromium-browser
 flatpak install com.github.Eloston.UngoogledChromium
 echo -e "\nDone\n"
 sleep 2
