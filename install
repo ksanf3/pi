@@ -53,8 +53,8 @@ sleep 2
 
 
 
-# install packages
-echo -e "\nInstalling packages\n"
+# install kde plasma
+echo -e "\nInstalling KDE Plasma\n"
 sleep 2
 sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor dconf-cli chromium-browser
 sudo apt purge konqueror
