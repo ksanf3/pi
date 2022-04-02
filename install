@@ -57,8 +57,6 @@ sleep 2
 echo -e "\nInstalling KDE Plasma\n"
 sleep 2
 sudo apt install plasma-desktop sddm konsole flatpak
-sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
-usermod -aG nordvpn pi
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\nDone\n"
 sleep 2
@@ -77,6 +75,7 @@ echo -e "\nImporting personal files\n"
 sleep 2
 git clone https://github.com/soberhippie3/personal
 mkdir /home/pi/Desktop
+cp /home/pi/personal/pi_packages /home/pi/Desktop
 cp /home/pi/personal/pi_config /home/pi/Desktop
 echo -e "\nDone\n"
 sleep 2
