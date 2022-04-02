@@ -56,8 +56,7 @@ sleep 2
 # install kde plasma
 echo -e "\nInstalling KDE Plasma\n"
 sleep 2
-sudo apt install kde-plasma-desktop guake flatpak vlc bat qbittorrent kate rpi-imager plasma-systemmonitor dconf-cli chromium-browser
-sudo apt purge konqueror
+sudo apt install plasma-desktop sddm konsole flatpak
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 usermod -aG nordvpn pi
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
