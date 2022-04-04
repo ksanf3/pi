@@ -1,11 +1,14 @@
-# Install Raspberry Pi OS Lite with Raspberry Pi Imager
+# Install Raspberry Pi OS Lite (64-bit) onto your SD card with Raspberry Pi Imager
 
 ## Default Login
 - Username: pi
 - Password: raspberry
 
 ## Setup Instructions
+
+
 - After logging in, run "sudo raspi-config" to set up WiFi through "System Options"
+- 
 - sudo apt update && sudo apt full-upgrade
 - sudo apt install git
 - git clone https://github.com/soberhippie3/pi
