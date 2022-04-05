@@ -6,7 +6,7 @@
   - Username: pi
   - Password: raspberry
 
-## 1. Set up the pi by running the following commands
+## 1) Set up the pi by running the following commands
   - sudo raspi-config
     - set up WiFi through "System Options"
     - select "Finish"
@@ -17,9 +17,9 @@
   - sudo apt update
   - /home/pi/pi/install
 
-## 2. Read files on desktop
+## 2) Read files on desktop
 
-## 3. Run config script
+## 3) Run config script
   - chmod a+x /home/pi/pi/config
   - sudo apt update
   - /home/pi/pi/config
