@@ -32,9 +32,9 @@ sudo echo -e "\n# Rewrap text on window resize" >> /home/pi/.bashrc
 sudo echo -e "shopt -s checkwinsize" >> /home/pi/.bashrc
 sudo echo -e "\n# apt alias" >> /home/pi/.bashrc
 sudo echo -e "alias apt-update='sudo apt update && sudo apt full-upgrade'" >> /home/pi/.bashrc
-echo -e "\n# NordVPN aliases" >> /home/pi/.bashrc
-echo -e "alias nordvpn-disconnect='sudo nordvpn disconnect && sudo nordvpn set killswitch disabled'" >> /home/pi/.bashrc
-echo -e "alias nordvpn-connect='sudo nordvpn connect United_States && sudo nordvpn set killswitch enabled'" >> /home/pi/.bashrc
+sudo echo -e "\n# NordVPN aliases" >> /home/pi/.bashrc
+sudo echo -e "alias nordvpn-disconnect='sudo nordvpn disconnect && sudo nordvpn set killswitch disabled'" >> /home/pi/.bashrc
+sudo echo -e "alias nordvpn-connect='sudo nordvpn connect United_States && sudo nordvpn set killswitch enabled'" >> /home/pi/.bashrc
 echo -e "\nDone\n"
 sleep 2
 
@@ -63,12 +63,12 @@ sleep 2
 # configure nordvpn
 echo -e "\nCongfiguring NordVPN\n"
 sleep 2
-nordvpn set technology NordLynx
-nordvpn set firewall enabled
-nordvpn set notify enabled
-nordvpn set autoconnect enabled United_States
-nordvpn connect United_States
-nordvpn set killswitch enabled
+sudo nordvpn set technology NordLynx
+sudo nordvpn set firewall enabled
+sudo nordvpn set notify enabled
+sudo nordvpn set autoconnect enabled United_States
+sudo nordvpn connect United_States
+sudo nordvpn set killswitch enabled
 echo -e "\nDone\n"
 sleep 2
 
@@ -87,7 +87,7 @@ sleep 2
 # configure guake
 echo -e "\nConfiguring Guake\n"
 sleep 2
-dconf load /apps/guake/ < /home/pi/personal/guake
+sudo dconf load /apps/guake/ < /home/pi/personal/guake
 sudo mkdir /home/pi/.config/autostart
 sudo cp /usr/share/applications/guake.desktop /home/pi/.config/autostart
 echo -e "\nDone\n"
@@ -97,11 +97,11 @@ sleep 2
 # configure kde plasma
 echo -e "\nConfiguring Plasma\n"
 sleep 2
-cp /home/pi/personal/system_monitor.page /home/pi/Desktop
-mkdir Pictures
-cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
-cp /home/pi/personal/mimeapps.list /home/pi/.config
-cp /home/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
+sudo cp /home/pi/personal/system_monitor.page /home/pi/Desktop
+sudo mkdir Pictures
+sudo cp /home/pi/personal/wallpaper.jpg /home/pi/Pictures
+sudo cp /home/pi/personal/mimeapps.list /home/pi/.config
+sudo cp /home/pi/personal/plasma-org.kde.plasma.desktop-appletsrc /home/pi/.config
 sudo echo -e "index hidden folders=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "only basic indexing=true" >> /home/pi/.config/baloofilerc
 sudo echo -e "[DoNotDisturb]\nWhenScreensMirrored=false" > /home/pi/.config/plasmanotifyrc
