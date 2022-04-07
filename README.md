@@ -1,10 +1,6 @@
 # Instructions
   - Install Raspberry Pi OS Lite (64-bit) onto your SD card with Raspberry Pi Imager
-  - Once installed, boot up the pi and login
-
-### Default Login
-  - Username: pi
-  - Password: raspberry
+  - Once installed, boot up the pi and set username as "pi"
 
 ## 1) Set up the pi by running the following commands
   - sudo raspi-config
