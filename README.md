@@ -1,3 +1,6 @@
+### Description
+  - This is a script that installs Raspberry Pi OS Lite (64-bit) just the way I like it
+
 # Instructions
   - Install Raspberry Pi OS Lite (64-bit) onto your SD card with Raspberry Pi Imager
   - Once installed, boot up the pi and set default keyboard, then set username as "pi"
