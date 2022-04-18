@@ -3,7 +3,7 @@
 
 # Instructions
   - Install Raspberry Pi OS Lite (64-bit) onto your SD card with Raspberry Pi Imager
-  - Once installed, boot up the pi and set default keyboard, then set username as "pi"
+  - Once installed, boot up the pi and set the keyboard layout to "English (US), then set username as "pi"
 
 ## 1) Set up the pi by running the following commands
   - sudo raspi-config
