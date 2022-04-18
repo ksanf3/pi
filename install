@@ -40,7 +40,7 @@ sudo ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
 sudo sed -i 's/en_GB.UTF-8 UTF-8/# en_GB.UTF-8 UTF-8/' /etc/locale.gen
 sudo sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sudo locale-gen
-sudo sed -i 's/gb/us/' /etc/default/keyboard
+#sudo sed -i 's/gb/us/' /etc/default/keyboard
 echo -e "\nDone\n"
 sleep 2
 
