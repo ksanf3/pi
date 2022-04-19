@@ -25,7 +25,7 @@ sleep 2
 # set the time and language
 echo -e "\nSetting time and language\n"
 sleep 2
-sudo ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
+#sudo ln -sf /usr/share/zoneinfo/"$timeZone" /etc/localtime
 sudo sed -i 's/en_GB.UTF-8 UTF-8/# en_GB.UTF-8 UTF-8/' /etc/locale.gen
 sudo sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sudo locale-gen
