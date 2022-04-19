@@ -4,11 +4,11 @@
 # Instructions
   - Install Raspberry Pi OS Lite (64-bit) onto your SD card with Raspberry Pi Imager
   - Once installed, boot up the pi and set the keyboard layout to "English (US), then set username as "pi"
-  - If you want, set up SSH by running "raspi-config", then go to "Interface Options"
 
 ## 1) Set up the pi by running the following commands
   - sudo raspi-config
     - set up WiFi through "System Options"
+    - enable SSH through "Interface Options"
     - select "Finish"
   - sudo apt update && sudo apt full-upgrade
   - sudo apt install git
