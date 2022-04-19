@@ -14,14 +14,6 @@ sleep 2
 
 
 
-
-
-
-
-
-# configure system
-
-
 # set the time and language
 echo -e "\nSetting time and language\n"
 sleep 2
@@ -32,11 +24,6 @@ sudo locale-gen
 #sudo sed -i 's/gb/us/' /etc/default/keyboard
 echo -e "\nDone\n"
 sleep 2
-
-
-
-
-
 
 
 
@@ -55,11 +42,6 @@ sleep 2
 
 
 
-
-
-
-
-
 # import personal files
 echo -e "\nImporting personal files\n"
 sleep 2
@@ -69,11 +51,6 @@ cp /home/pi/personal/1-pi-packages /home/pi/Desktop
 cp /home/pi/personal/2-pi-config /home/pi/Desktop
 echo -e "\nDone\n"
 sleep 2
-
-
-
-
-
 
 
 
