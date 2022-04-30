@@ -8,7 +8,9 @@
 ## 1) Set up the pi by running the following commands
   - sudo raspi-config
     - set up WiFi through "System Options"
+    - enable boot to desktop through "System Options"
     - enable SSH through "Interface Options"
+    - 
     - select "Finish"
   - sudo apt update && sudo apt full-upgrade
   - sudo apt install git
