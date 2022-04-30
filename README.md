@@ -8,9 +8,7 @@
 ## 1) Set up the pi by running the following commands
   - sudo raspi-config
     - set up WiFi through "System Options"
-    - enable boot to desktop through "System Options"
     - enable SSH through "Interface Options"
-    - 
     - select "Finish"
   - sudo apt update && sudo apt full-upgrade
   - sudo apt install git
@@ -18,6 +16,9 @@
   - chmod a+x /home/pi/pi/install
   - sudo apt update
   - /home/pi/pi/install
+  - once the script finishes, run...
+    - sudo raspi-config
+    - enable boot to desktop through "System Options"
 
 ## 2) Read files on desktop
 
