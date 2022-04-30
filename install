@@ -32,7 +32,7 @@ sleep 2
 # install kde plasma
 echo -e "\nInstalling KDE Plasma\n"
 sleep 2
-sudo apt install plasma-desktop sddm konsole kate flatpak
+sudo apt install plasma-desktop konsole kate flatpak
 sudo systemctl enable sddm
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\nDone\n"
