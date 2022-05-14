@@ -12,7 +12,7 @@
     - select "Finish"
   - sudo apt update && sudo apt full-upgrade
   - sudo apt install git
-  - git clone https://github.com/soberhippie3/pi
+  - git clone https://github.com/ksanf3/pi
   - chmod a+x /home/pi/pi/install
   - sudo apt update
   - /home/pi/pi/install
