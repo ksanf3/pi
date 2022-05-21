@@ -40,3 +40,4 @@ sleep 2
 echo -e "\n\n\n\n\n\n\n\n\n\nFinal Instructions\n"
 echo -e "\nrun the command \"sudo raspi-config\"\n"
 echo -e "\nenable boot to desktop through \"System Options\"\n"
+reboot
