@@ -7,8 +7,7 @@
 # install kde plasma
 echo -e "\nInstalling KDE Plasma\n"
 sleep 2
-sudo apt install flatpak kde-standard sddm xorg
-sudo systemctl enable sddm
+sudo apt install flatpak kde-standard lightdm xorg
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\nDone\n"
 sleep 2
