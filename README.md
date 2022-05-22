@@ -9,7 +9,7 @@
   - sudo raspi-config
     - set up WiFi through "System Options"
     - enable SSH through "Interface Options"
-    - set timezone through "Localisation Options"
+    - set locale & timezone through "Localisation Options"
     - select "Finish"
   - sudo apt update && sudo apt full-upgrade
   - sudo apt install git
