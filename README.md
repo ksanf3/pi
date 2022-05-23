@@ -23,6 +23,6 @@
 ## 2) Read files on desktop
 
 ## 3) Run the config script with the following commands to finish configuring the system
-      - `chmod a+x /home/pi/pi/config`
-      - `sudo apt update`
-      - `/home/pi/pi/config`
+  1. `chmod a+x /home/pi/pi/config`
+  2. `sudo apt update`
+  3. `/home/pi/pi/config`
