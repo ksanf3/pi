@@ -10,7 +10,7 @@
 # install packages from official repo
 echo -e "\nInstalling packages from official repo\n"
 sleep 2
-sudo apt install dconf-cli flatpak guake kde-standard kodi lightdm qbittorrent vlc
+sudo apt install dconf-cli flatpak guake kde-standard kodi qbittorrent sddm vlc
 echo -e "\nDone\n"
 sleep 2
 
@@ -47,7 +47,8 @@ sleep 2
 
 
 
-# show final instructions
-echo -e "\n\n\n\n\n\n\n\n\n\nFinal Instructions\n"
-echo -e "\nrun the command \"sudo raspi-config\"\n"
-echo -e "\nenable boot to desktop through \"System Options\"\n"
+# reboot into plasma
+echo -e "\nRebooting into plasma\n"
+sleep 2
+systemctl enable sddm
+reboot
