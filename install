@@ -26,7 +26,7 @@ sleep 2
 echo -e "\nInstalling NordVPN\n"
 sleep 2
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
-usermod -aG nordvpn pi
+sudo usermod -aG nordvpn pi
 echo -e "\nDone\n"
 sleep 2
 
@@ -50,5 +50,5 @@ sleep 2
 # reboot into plasma
 echo -e "\nRebooting into plasma\n"
 sleep 2
-systemctl enable sddm
+sudo systemctl enable sddm
 reboot
