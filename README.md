@@ -23,6 +23,6 @@
 ## 2) Read files on desktop
 
 ## 3) Run config script
-    - `chmod a+x /home/pi/pi/config`
-    - `sudo apt update`
-    - `/home/pi/pi/config`
+      - `chmod a+x /home/pi/pi/config`
+      - `sudo apt update`
+      - `/home/pi/pi/config`
